@@ -1,0 +1,50 @@
+*{
+    padding: 0;
+    margin: 0;
+
+}
+
+body{
+    background-color: #3F3D56;
+
+}
+
+.Simg{
+    position: absolute;
+    top: 20%;
+    left: 25%;
+}
+
+#hand{
+animation: handmotion 1.5s infinite linear;
+transform-origin: bottom;
+transform-box: fill-box;
+}
+#planet{
+    animation: rotation 1.5s infinite linear;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes rotation {
+    0%{
+            transform: rotateZ(-15deg);
+    }
+    50%{
+         transform: rotateZ(15deg);
+    }
+    100%{
+transform: rotateZ(-15deg);
+    }
+}
+@keyframes handmotion{
+    0%{
+            transform: skewX(-4deg);
+    }
+    50%{
+transform: skewX(0deg);
+    }
+    100%{
+        transform: skewX(-4deg);
+    }
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GlassMorphism Website</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container" id="blur">
+        <nav>
+            <h1>LOGO</h1>
+            <button class="btn1"  onclick="popup()">Login</button>
+        </nav>
+        <div class="content">
+            <div class="text">
+                <h1>Welcome to Technical Bites</h1>
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+            </div>
+            <img src="./pexels-negative-space-34153.jpg" alt="tech-bite" width="500px" height="350px">
+        </div>
+    </div>
+    <div class="popupform" id="popup">
+        <h1>Login</h1>
+        <form>
+            <label >Username</label>
+            <input type="text" name="Username" placeholder="Username">
+            <label >Password</label>
+            <input type="password" name="Password" placeholder="Password">
+        </form>
+        <button class="btn2" onclick="popup()">Submit</button>
+        <p>Not Registered? <span>Create Your Account</span></p>
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>

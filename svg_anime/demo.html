@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradient color</title>
+    <style>
+        body{
+            background-color: teal;
+             font-family:Arial, Helvetica, sans-serif;
+            font-size: 40px;
+        }
+        h1{
+           
+           transition: all 100s ease;
+            animation: change 5s infinite ease;
+            }
+            @keyframes change{
+                0%{
+                     background: linear-gradient(120deg, #c7c3c1, #d8d5c8);
+            
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+                }
+               100% {
+                     background: linear-gradient(120deg, #dd8861, #e6c542);
+            
+                     -webkit-text-fill-color: transparent;
+                    -webkit-background-clip: text;
+                }
+            }
+            
+    </style>
+</head>
+<body>
+    <h1>This is Gradient Text</h1>
+</body>
+</html>

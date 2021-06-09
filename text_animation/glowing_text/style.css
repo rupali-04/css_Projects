@@ -1,0 +1,70 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    background-color: black;
+
+}
+
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: black;
+}
+
+.text{
+    color: aliceblue;
+    background-color: black;
+    font-size: 8rem;
+    font-weight: 800;
+
+}
+.text::before{
+    content: "Welcome";
+    position: absolute;
+    mix-blend-mode: difference;
+    filter: blur(2.5px);
+}
+
+.textBox{
+    overflow: hidden;
+    filter: brightness(150%);
+}
+
+.text::after{
+    content: "";
+    background: linear-gradient(110deg, rgba(248, 198, 215,1) 5%,rgba(175, 233, 249,1) 95%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: multiply;
+}
+
+.radial{
+    background: radial-gradient(circle, #fff,black 20%) center / 25% 25%;
+
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    right: 0;
+    bottom: 0;
+    mix-blend-mode: color-dodge;
+animation: anime 2s infinite linear;
+}
+
+@keyframes anime{
+    to{
+        transform: translate(60%,70%);
+        transition: all 0.2s ease;
+    }
+}

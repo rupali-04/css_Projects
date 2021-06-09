@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgb(77, 152, 161);
+}
+.image{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+#social .Vector{
+    transform-origin: center;
+    transform-box: fill-box;
+    opacity: 0;
+}
+#hand{
+    animation:  move 2s infinite linear ;
+    transform-origin: top;
+    transform-box: fill-box;
+}
+
+@keyframes move {
+    0%{ transform: rotateZ(0deg)}
+    50%{transform: rotateZ(5deg)}
+    100%{transform: rotateZ(0deg)}
+}
+@keyframes pop {
+    0%{ 
+        transform: translate(5px,-5px) scale(0,0);
+        opacity: 1;
+    }
+    50%{
+        transform: translate(5px,-80px) scale(1,1);
+        opacity: 0.8;
+    }
+    100%{
+        transform: translate(10px,-150px) scale(0,0);
+        opacity: 0;
+    }
+}

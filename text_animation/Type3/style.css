@@ -1,0 +1,27 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(58,64,66);
+}
+#image{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    fill: transparent;
+    animation: color 2s ease forwards 3s;
+}
+@keyframes path {
+    to{
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes color{
+    to{
+        fill: whitesmoke;
+    }
+}

@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #E5E5E5;
+}
+
+.image{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);}
+
+    #Swing{
+        animation: swing 2.5s infinite linear;
+        transform-origin: top;
+        transform-box: fill-box;
+    }
+
+    @keyframes swing{
+        0%{
+            transform: rotateZ(-10deg);
+        }
+        50%{
+            transform: rotateZ(10deg);
+        }
+        100%{
+            transform: rotateZ(-10deg);
+        }
+    }
+    #Group1{
+        animation: wavy 2s infinite ease-in-out;
+        transform-origin: bottom;
+    }
+   
+    @keyframes wavy{
+        0%{
+                transform: skewX(-5deg);
+        }
+        50%{
+            transform: skewX(0deg);
+        }
+        100%{
+  transform: skewX(-5deg);
+        }
+    }
+
+
+
+    

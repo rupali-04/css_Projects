@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0%;
+}
+
+.img{
+    position: absolute;
+    top: 20%;
+    left: 25%;
+}
+#lsidestree{
+    animation: wave 1.2s infinite linear;
+    transform-origin: bottom;
+}
+#lsidemtree{
+    animation: wave 1.6s infinite linear;
+    transform-origin: bottom;
+}
+#lsidebtree{
+    animation: wave 2.4s infinite linear;
+    transform-origin: bottom;
+}
+#rsidestree{
+    animation: wave 1.2s infinite linear;
+    transform-origin: bottom;
+}
+#rsidemtree{
+    animation: wave 1.6s infinite linear;
+    transform-origin: bottom;
+}
+#rsidebtree{
+    animation: wave 2.4s infinite linear; 
+    transform-origin: bottom;
+}
+@keyframes wave{
+    0%{
+        transform: skewX(-2deg);
+
+    }
+    50%{
+        transform: skewX(0deg);
+        
+    }
+    100%{
+        transform: skewX(-2deg);
+        
+    }
+}

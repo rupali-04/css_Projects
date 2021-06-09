@@ -1,0 +1,114 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+header {
+  min-height: 100vh;
+  position: relative;
+  background: linear-gradient(
+    -230deg,
+    rgba(63, 41, 165, 0.7),
+    rgba(0, 0, 0, 0.582)
+  );
+  color: aliceblue;
+}
+.intro_text {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.intro_text h1 {
+  font-size: 60px;
+}
+.intro_text p {
+  font-size: 30px;
+}
+
+.prop1 {
+  position: fixed;
+  top: 70%;
+  right: 10%;
+  transform: translate(-20%, -90%);
+  height: 350px;
+  transition: all 1s ease;
+  z-index: 1;
+}
+
+.bigC {
+  position: absolute;
+  width: 230px;
+  height: 220px;
+  top: 15%;
+  right: 20%;
+}
+
+.smallC {
+  position: absolute;
+  width: 130px;
+  height: 130px;
+  top: 5%;
+  right: 5%;
+}
+
+section {
+  position: relative;
+  height: 100vh;
+  color: aliceblue;
+  background: linear-gradient(270deg, blueviolet, #000);
+}
+
+.g_text {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  visibility: hidden;
+}
+.gallery {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: -15%;
+  transform: translate("50px", "50px");
+  visibility: hidden;
+}
+
+span:first-child {
+  position: absolute;
+  top: 20%;
+  left: 80%;
+}
+
+span:nth-child(2) {
+  position: absolute;
+  top: 10%;
+  left: 55%;
+}
+
+span:last-child {
+  position: absolute;
+  top: 56%;
+  left: 55%;
+}
+footer {
+  position: relative;
+  height: 40vh;
+
+  background-color: rgb(197, 186, 204);
+}
+
+footer h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: rgb(96, 103, 109);
+  transform: translate(-50%, -50%);
+  font-size: 60px;
+}

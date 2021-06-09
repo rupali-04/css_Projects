@@ -1,0 +1,139 @@
+*{
+    padding: 0;
+    font-family: sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(90deg,rgb(53,51,53),rgba(25,24,26,0.733));
+    color: aliceblue;
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(0, 0, 0, 0.383);
+    height: 8vh;
+    align-items: center;
+    backdrop-filter: blur(10px);
+}
+nav .btn1{
+    width: 100px;
+    height: 8vh;
+    color: whitesmoke;
+    background-color: transparent;
+    border: none;
+    font-size: 1.2rem;
+    backdrop-filter: blur(10px);
+}
+
+.btn1:focus{
+    outline: none;
+}
+
+.btn1:hover{
+    opacity: 0.7;
+    cursor: pointer;
+}
+.content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    text-align: center;
+    height: 90vh;
+    align-items: center;
+
+}
+
+.popupform{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 400px;
+    height: 70vh;
+    padding: 50px;
+    background-color: rgba(243,237,237,0.212);
+    box-shadow: 0 5px 70px rgba(39,38,38,0.794);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 2s;
+}
+
+.popupform h1{
+    text-align: center;
+    font-size: 1.9rem;
+    letter-spacing: 10px;
+}
+
+form{
+    margin-top: 40px;
+}
+
+label{
+    display: block;
+    color: aliceblue;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    padding-top: 0.5px;
+}
+input{
+    display: block;
+    width: 90%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #fff;
+    padding: 10px;
+    font-size: 0.5rem;
+}
+input:focus{
+    outline: none;
+}
+
+::placeholder{
+    color: rgba(255,255,255,0.4);
+    font-size: 0.8rem;
+}
+
+.btn2{
+    width: 120px;
+    height: 50px;
+    background-color: rgba(19,18,18,0.582);
+    border: none;
+    color: #fff;
+    position: relative;
+    top: 50px;
+    left: 90px;
+}
+
+.btn2:focus{
+    outline: none;
+}
+
+.btn2:hover{
+    background-color: rgba(19,18,18);
+    cursor: pointer;
+}
+
+.popupform p{
+    position: absolute;
+    top: 90%;
+    left: 22%;
+    color: rgba(255,255,255,0.445);
+}
+
+.popupform p span{
+    color: rgb(230,230,230);
+}
+
+.active{
+    filter: blur(2px);
+}
+
+.show{
+      visibility: visible;
+    opacity: 1;
+    transition: all 2s;
+}

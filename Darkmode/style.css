@@ -1,0 +1,216 @@
+:root {
+  --light-bgcolor: rgb(255, 255, 255);
+  --light-textcolor: #000;
+  --light-header: #7fb637;
+  --light-footer: #d7fdcc;
+  --light-btn: #c5d43f;
+  --light-hoverbtn: rgb(38, 46, 58);
+  --light-ck-btn: rgb(255, 139, 23);
+  --dark-bgcolor: rgb(38, 46, 58);
+  --dark-textcolor: #fff;
+  --dark-header: rgb(13, 17, 26);
+  --dark-footer: rgb(23, 24, 29);
+  --dark-btn: rgb(207, 174, 238);
+  --dark-hoverbtn: #b7e2ab;
+  --dark-hovertext: #333;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+body {
+  background-color: var(--light-bgcolor);
+  color: var(--light-textcolor);
+  transition: 1s ease;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  min-height: 10vh;
+  align-items: center;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  flex-wrap: wrap;
+
+  letter-spacing: 0.1rem;
+}
+
+.navigator,
+h1 {
+  flex: 1;
+}
+
+input[type="checkbox"] {
+  cursor: pointer;
+  position: relative;
+  width: 60px;
+  height: 30px;
+  -webkit-appearance: none;
+  background-color: var(--light-ck-btn);
+  outline: none;
+  box-shadow: inset 0 0 15px rgb(110, 109, 109);
+  border-radius: 25px;
+  transition: 0.2s;
+}
+input:checked[type="checkbox"] {
+  background-color: rgb(45, 44, 61);
+}
+input[type="checkbox"]:before {
+  content: "";
+  position: absolute;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  border-radius: 20px;
+  background-color: rgb(255, 251, 251);
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+  transform: scale(1.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+input:checked[type="checkbox"]:before {
+  left: 30px;
+}
+
+label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(0%, -50%);
+  z-index: 1;
+  pointer-events: none;
+  width: 50px;
+  overflow: hidden;
+}
+
+#sun {
+  transform: translate(80%, 0%);
+  color: rgb(252, 248, 24);
+}
+#moon {
+  color: greenyellow;
+}
+input:checked[type="checkbox"] + label #sun {
+  transform: translate(180%, 0%);
+  visibility: hidden;
+
+  transition: transform 0.2s ease-in;
+}
+input[type="checkbox"] + label #sun {
+  transform: translate(100%, 0%);
+  visibility: visible;
+
+  transition: transform 0.2s ease-in;
+}
+input:checked[type="checkbox"] + label #moon {
+  transform: translate(0, 0);
+  visibility: visible;
+}
+input[type="checkbox"] + label #moon {
+  transform: translate(-100%, 0%);
+  transition: transform 0.2s ease-in;
+  visibility: hidden;
+}
+.theme {
+  position: relative;
+  padding-left: 3rem;
+}
+header {
+  background-color: var(--light-header);
+  transition: 1s ease;
+  box-shadow: 0 1px 15px #333;
+}
+section {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 90%;
+  min-height: 85vh;
+  margin: auto;
+}
+.image,
+.text_box {
+  flex: 1;
+}
+img {
+  filter: brightness(85%);
+}
+.text_box {
+  text-align: center;
+}
+.text_box h3 {
+  line-height: 40px;
+}
+.btn {
+  margin-top: 1rem;
+  width: 120px;
+  height: 50px;
+  border: none;
+  background-color: var(--light-btn);
+  box-shadow: inset 0 0 4px rgb(97, 103, 105);
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  transition: all 1s ease-in;
+}
+.btn:focus {
+  outline: none;
+}
+.btn:hover {
+  letter-spacing: 0.5rem;
+  width: 200px;
+  background-color: var(--light-hoverbtn);
+  color: #fff;
+}
+
+footer {
+  background-color: var(--light-footer);
+  position: relative;
+  width: 100%;
+  min-height: 5vh;
+  transition: 1s ease;
+}
+footer p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+footer span {
+  color: rgb(192, 55, 55);
+}
+body.dark {
+  background-color: var(--dark-bgcolor);
+  color: var(--dark-textcolor);
+  transition: 1s ease;
+}
+footer.dark {
+  background-color: var(--dark-footer);
+  transition: 1s ease;
+}
+header.dark {
+  background-color: var(--dark-header);
+  transition: 1s ease;
+}
+.btn.dark {
+  background-color: var(--dark-btn);
+  transition: 1s ease;
+}
+.btn.dark:hover {
+  background-color: var(--dark-hoverbtn);
+  transition: 1s ease;
+  color: var(--dark-hovertext);
+}
